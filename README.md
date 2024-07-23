@@ -1,6 +1,11 @@
 # N5 - Challenge
 ## Tony Yu - tonyyucen@gmail.com
 
+### Repositorio Github
+
+```
+https://github.com/confixyu/n5-challenge-tony
+```
 
 ### Ingresar al admin panel
 Al admin panel de ingresa de manera directo, no tiene control de usuario u autenticación.
@@ -70,7 +75,9 @@ curl --location 'localhost/generar_informe/juan@mail.com'
 
 ### Propuesta de arquitectura
 
+![img.png](img.png)
 
+En esta arquitectura contemplando salida a producción fargate es una buena opcion debido a que los costos son menores aunque un EC2 tambien es buena opción, se usa una RDS postgres para la percistencia de datos, el fargate y la RDS se le asigana una VPC para controlar el ingreso no deseado por externos manajando la seguridad, se usa Route 53 para asignar un dominio y un Application Load Balancer para manejar el alto tráfico, agregando el WAF ayuda a mantener seguro el servicio evitando ataque cibernetico, el Secret key manager para manejo de credenciales. 
 
 
 #### Muchas Gracias por darme la oportunidad de participar.
